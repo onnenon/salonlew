@@ -25,9 +25,9 @@
     </div>
     <div class="mobile-link-wrapper" v-show="display_menu">
       <div class="mobile-link" v-for="link in nav_links" v-bind:key="link">
-        <router-link v-on:click.native="toggle_menu" :to="link.path">
-          {{ link.text }}
-        </router-link>
+        <router-link v-on:click.native="toggle_menu" :to="link.path">{{
+          link.text
+        }}</router-link>
       </div>
       <div class="mobile-social">
         <div class="mobile-social-link">
@@ -158,12 +158,13 @@ a:hover {
   }
   .bar {
     height: 5.5em;
+    display: flex;
   }
   .mobile-nav-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex: 0 1 100%;
+    flex: 1;
   }
   .mobile-link-wrapper {
     display: flex;
