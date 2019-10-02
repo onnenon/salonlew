@@ -59,6 +59,7 @@ i {
 a {
   text-decoration: none;
   color: #282327;
+  outline: 0;
 }
 a:visited {
   color: #2d2d2d;

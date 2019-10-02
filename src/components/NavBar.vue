@@ -25,9 +25,9 @@
     </div>
     <div class="mobile-link-wrapper" v-show="display_menu">
       <div class="mobile-link" v-for="link in nav_links" v-bind:key="link">
-        <router-link v-on:click.native="toggle_menu" :to="link.path">{{
-          link.text
-        }}</router-link>
+        <router-link v-on:click.native="toggle_menu" :to="link.path">
+          {{ link.text }}
+        </router-link>
       </div>
       <div class="mobile-social">
         <div class="mobile-social-link">
@@ -136,6 +136,7 @@ a {
   text-decoration: none;
   color: #ffffff;
   padding: 1.2em;
+  outline: 0;
 }
 .router-link-exact-active {
   color: #853179;
