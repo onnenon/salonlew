@@ -1,6 +1,10 @@
 <template>
   <div class="wrapper">
-    <img alt="salon lew logo" src="../assets/logo.png" />
+    <picture>
+      <source srcset="../assets/logo.webp" type="image/webp" />
+      <source srcset="../assets/logo.png" type="image/png" />
+      <img alt="salon lew logo" src="../assets/logo.png" />
+    </picture>
     <div class="links">
       <div class="address">
         <i class="fa fa-map-marker-alt" />

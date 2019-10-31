@@ -16,18 +16,28 @@
         </div>
       </div>
       <div class="mobile-nav-wrapper">
-        <img
-          alt="salon lew logo"
-          src="../assets/salonlew_logo_white_small.png"
-        />
+        <picture>
+          <source
+            srcset="../assets/salonlew_logo_white_small.webp"
+            type="image/webp"
+          />
+          <source
+            srcset="../assets/salonlew_logo_white_small.png"
+            type="image/png"
+          />
+          <img
+            alt="salon lew logo"
+            src="../assets/salonlew_logo_white_small.png"
+          />
+        </picture>
         <i :class="mobile_icon[mobile_icon_index]" @click="toggle_menu" />
       </div>
     </div>
     <div class="mobile-link-wrapper" v-show="display_menu">
       <div class="mobile-link" v-for="link in nav_links" v-bind:key="link">
-        <router-link v-on:click.native="toggle_menu" :to="link.path">{{
-          link.text
-        }}</router-link>
+        <router-link v-on:click.native="toggle_menu" :to="link.path">
+          {{ link.text }}
+        </router-link>
       </div>
       <div class="mobile-social">
         <div class="mobile-social-link">
