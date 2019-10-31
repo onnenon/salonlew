@@ -3,10 +3,20 @@
     <div class="hero">
       <div class="home-width">
         <div class="home-wrapper">
-          <img
-            alt="salon lew logo"
-            src="../assets/salonlew_logo_white_large.png"
-          />
+          <picture>
+            <source
+              srcset="../assets/salonlew_logo_white_large.webp"
+              type="image/webp"
+            />
+            <source
+              srcset="../assets/salonlew_logo_white_large.png"
+              type="image/png"
+            />
+            <img
+              alt="salon lew logo"
+              src="../assets/salonlew_logo_white_large.png"
+            />
+          </picture>
           <div class="hero-text">
             <p>
               You'll be in good hands with experienced professionals. Whether
@@ -49,7 +59,11 @@
             with the newest trends for each season! Stop in today and book your
             appointment with Laine!
           </p>
-          <img src="../assets/i2.jpg" />
+          <picture>
+            <source srcset="../assets/i2.webp" type="image/webp" />
+            <source srcset="../assets/i2.jpg" type="image/jpeg" />
+            <img src="../assets/i2.jpg" alt="Owner Picture" />
+          </picture>
           <h3>Laine Wright</h3>
         </div>
       </div>
