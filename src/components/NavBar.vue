@@ -3,12 +3,16 @@
     <div class="bar">
       <div class="nav-wrapper">
         <div class="nav-links">
-          <div class="nav-link" v-for="link in nav_links" v-bind:key="link">
+          <div
+            class="nav-link"
+            v-for="(link, index) in nav_links"
+            v-bind:key="index"
+          >
             <router-link :to="link.path">{{ link.text }}</router-link>
           </div>
         </div>
         <div class="social-links">
-          <div v-for="item in social_links" v-bind:key="item">
+          <div v-for="(item, index) in social_links" v-bind:key="index">
             <a :href="item.link">
               <i :class="item.icon" />
             </a>
@@ -34,10 +38,14 @@
       </div>
     </div>
     <div class="mobile-link-wrapper" v-show="display_menu">
-      <div class="mobile-link" v-for="link in nav_links" v-bind:key="link">
-        <router-link v-on:click.native="toggle_menu" :to="link.path">
-          {{ link.text }}
-        </router-link>
+      <div
+        class="mobile-link"
+        v-for="(link, index) in nav_links"
+        v-bind:key="index"
+      >
+        <router-link v-on:click.native="toggle_menu" :to="link.path">{{
+          link.text
+        }}</router-link>
       </div>
       <div class="mobile-social">
         <div class="mobile-social-link">
@@ -47,8 +55,8 @@
         </div>
         <div
           class="mobile-social-link"
-          v-for="item in social_links"
-          v-bind:key="item"
+          v-for="(item, index) in social_links"
+          v-bind:key="index"
         >
           <a :href="item.link">
             <i :class="item.icon" />
