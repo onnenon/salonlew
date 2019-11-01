@@ -69,7 +69,9 @@ a:visited {
   color: #2d2d2d;
 }
 img {
-  height: 100%;
+  max-height: 4.5em;
+}
+picture {
   object-fit: contain;
 }
 </style>
