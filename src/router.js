@@ -36,6 +36,7 @@ export default new Router({
       path: "/contact",
       name: "Contact",
       component: () => import("./views/Contact.vue")
-    }
+    },
+    { path: "*", redirect: "/" }
   ]
 });
