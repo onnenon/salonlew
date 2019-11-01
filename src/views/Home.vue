@@ -78,6 +78,7 @@
     </div>
     <div class="map">
       <iframe
+        title="salon lew location map"
         class="actAsDiv"
         width="100%"
         height="347"
