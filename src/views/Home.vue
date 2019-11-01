@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="hero">
+    <div :class="[backgroundUrl, heroClass]">
       <div class="home-width">
         <div class="home-wrapper">
           <picture>
@@ -35,14 +35,22 @@
           <h3>SALON HOURS</h3>
           <div class="hours-inner">
             <div class="hours">
-              <div class="hour" v-for="(value, key) in hours" v-bind:key="key">
-                {{ key }}
+              <div
+                class="hour"
+                v-for="(item, index) in hours"
+                v-bind:key="index"
+              >
+                {{ item.day }}
                 <br />
               </div>
             </div>
             <div class="times">
-              <div class="time" v-for="value in hours" v-bind:key="value">
-                {{ value }}
+              <div
+                class="time"
+                v-for="(item, index) in hours"
+                v-bind:key="index"
+              >
+                {{ item.hours }}
                 <br />
               </div>
             </div>
@@ -88,16 +96,25 @@ export default {
   name: "Home",
   data() {
     return {
-      hours: {
-        Monday: "noon - 5 pm",
-        Tuesday: "9 am - 7 pm",
-        Wednesday: "10 am - 8 pm",
-        Thursday: "9 am - 7 pm",
-        Friday: "9 am - 5 pm",
-        Saturday: "8 am - 3 pm",
-        Sunday: "Closed"
-      }
+      hours: [
+        { day: "Monday", hours: "noon - 5 pm" },
+        { day: "Tuesday", hours: "9 am - 7 pm" },
+        { day: "Wednesday", hours: "10 am - 8 pm" },
+        { day: "Thursday", hours: "9 am - 7 pm" },
+        { day: "Friday", hours: "9 am - 5 pm" },
+        { day: "Saturday", hours: "8 am - 3 pm" },
+        { day: "Sunday", hours: "Closed" }
+      ],
+      heroClass: "hero"
     };
+  },
+  computed: {
+    backgroundUrl: () => {
+      if (self.createImageBitmap) {
+        return "hero-webp";
+      }
+      return "hero-jpg";
+    }
   }
 };
 </script>
@@ -197,8 +214,13 @@ h3 {
   flex-wrap: wrap;
   min-height: 21em;
 }
-.hero {
+.hero-webp {
+  background-image: url("../assets/hair-header.webp");
+}
+.hero-jpg {
   background-image: url("../assets/hair-header.jpg");
+}
+.hero {
   background-size: cover;
   display: flex;
   flex: 0 1 90vh;
