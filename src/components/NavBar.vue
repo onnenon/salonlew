@@ -13,7 +13,7 @@
         </div>
         <div class="social-links">
           <div v-for="(item, index) in social_links" v-bind:key="index">
-            <a :href="item.link">
+            <a :href="item.link" :aria-label="item.label">
               <i :class="item.icon" />
             </a>
           </div>
@@ -43,9 +43,9 @@
         v-for="(link, index) in nav_links"
         v-bind:key="index"
       >
-        <router-link v-on:click.native="toggle_menu" :to="link.path">{{
-          link.text
-        }}</router-link>
+        <router-link v-on:click.native="toggle_menu" :to="link.path">
+          {{ link.text }}
+        </router-link>
       </div>
       <div class="mobile-social">
         <div class="mobile-social-link">
@@ -77,14 +77,17 @@ export default {
       mobile_icon_index: 0,
       social_links: {
         facebook: {
+          label: "salon lew Facebook",
           icon: "fab fa-facebook-f",
           link: "https://facebook.com/salonlew"
         },
         twitter: {
+          label: "salon lew Twitter",
           icon: "fab fa-twitter",
           link: "https://twitter.com/salon_lew"
         },
         instagram: {
+          label: "salon lew Instagram",
           icon: "fab fa-instagram",
           link: "https://instagram.com/salon.lew"
         }
