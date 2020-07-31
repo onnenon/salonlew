@@ -7,11 +7,11 @@
 </template>
 
 <script>
-import NavBar from "./components/NavBar.vue";
-import TopBar from "./components/TopBar.vue";
+import NavBar from './components/NavBar.vue';
+import TopBar from './components/TopBar.vue';
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     NavBar,
     TopBar

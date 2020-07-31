@@ -94,27 +94,27 @@
 
 <script>
 export default {
-  name: "Home",
+  name: 'Home',
   data() {
     return {
       hours: [
-        { day: "Monday", hours: "noon - 5 pm" },
-        { day: "Tuesday", hours: "9 am - 7 pm" },
-        { day: "Wednesday", hours: "10 am - 8 pm" },
-        { day: "Thursday", hours: "9 am - 7 pm" },
-        { day: "Friday", hours: "9 am - 5 pm" },
-        { day: "Saturday", hours: "8 am - 3 pm" },
-        { day: "Sunday", hours: "Closed" }
+        { day: 'Monday', hours: 'noon - 5 pm' },
+        { day: 'Tuesday', hours: '9 am - 7 pm' },
+        { day: 'Wednesday', hours: '10 am - 8 pm' },
+        { day: 'Thursday', hours: '9 am - 7 pm' },
+        { day: 'Friday', hours: '9 am - 5 pm' },
+        { day: 'Saturday', hours: '8 am - 3 pm' },
+        { day: 'Sunday', hours: 'Closed' }
       ],
-      heroClass: "hero"
+      heroClass: 'hero'
     };
   },
   computed: {
     backgroundUrl: () => {
       if (self.createImageBitmap) {
-        return "hero-webp";
+        return 'hero-webp';
       }
-      return "hero-jpg";
+      return 'hero-jpg';
     }
   }
 };
@@ -122,8 +122,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
-@import url("https://fonts.googleapis.com/css?family=Pacifico");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
 
 h3 {
   margin: 0;
@@ -160,7 +160,7 @@ h3 {
   align-items: center;
   background: #282327;
   color: #ffffff;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   padding: 2em;
   flex: 0 1 40vw;
 }
@@ -179,7 +179,7 @@ h3 {
 }
 .about-wrapper p {
   color: #7c7c7c;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   line-height: 1.5em;
   font-size: 0.9em;
   display: flex;
@@ -192,9 +192,9 @@ h3 {
   border-radius: 150px;
 }
 .about-wrapper h3 {
-  font-family: "Pacifico", sans-serif;
+  font-family: 'Pacifico', sans-serif;
   font-weight: 400;
-  font-feature-settings: "liga";
+  font-feature-settings: 'liga';
 }
 .hours-inner {
   display: flex;
@@ -216,10 +216,10 @@ h3 {
   min-height: 21em;
 }
 .hero-webp {
-  background-image: url("../assets/hair-header.webp");
+  background-image: url('../assets/hair-header.webp');
 }
 .hero-jpg {
-  background-image: url("../assets/hair-header.jpg");
+  background-image: url('../assets/hair-header.jpg');
 }
 .hero {
   background-size: cover;
@@ -242,7 +242,7 @@ h3 {
   color: #949494;
   text-align: right;
   font-size: 1.2em;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 .map {
   display: flex;

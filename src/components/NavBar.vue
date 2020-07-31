@@ -69,41 +69,41 @@
 
 <script>
 export default {
-  name: "NavBar",
+  name: 'NavBar',
   data() {
     return {
       display_menu: false,
-      mobile_icon: ["fas fa-bars", "fas fa-times"],
+      mobile_icon: ['fas fa-bars', 'fas fa-times'],
       mobile_icon_index: 0,
       social_links: {
         facebook: {
-          label: "salon lew Facebook",
-          icon: "fab fa-facebook-f",
-          link: "https://facebook.com/salonlew"
+          label: 'salon lew Facebook',
+          icon: 'fab fa-facebook-f',
+          link: 'https://facebook.com/salonlew'
         },
         twitter: {
-          label: "salon lew Twitter",
-          icon: "fab fa-twitter",
-          link: "https://twitter.com/salon_lew"
+          label: 'salon lew Twitter',
+          icon: 'fab fa-twitter',
+          link: 'https://twitter.com/salon_lew'
         },
         instagram: {
-          label: "salon lew Instagram",
-          icon: "fab fa-instagram",
-          link: "https://instagram.com/salon.lew"
+          label: 'salon lew Instagram',
+          icon: 'fab fa-instagram',
+          link: 'https://instagram.com/salon.lew'
         }
       },
       nav_links: [
-        { text: "HOME", path: "/" },
-        { text: "ABOUT US", path: "/about" },
-        { text: "SERVICES", path: "/services" },
-        { text: "PRODUCTS", path: "/products" },
-        { text: "CONTACT", path: "/contact" }
+        { text: 'HOME', path: '/' },
+        { text: 'ABOUT US', path: '/about' },
+        { text: 'SERVICES', path: '/services' },
+        { text: 'PRODUCTS', path: '/products' },
+        { text: 'CONTACT', path: '/contact' }
       ]
     };
   },
   methods: {
     toggle_menu() {
-      console.log("toggled");
+      console.log('toggled');
       this.mobile_icon_index = (this.mobile_icon_index + 1) % 2;
       this.display_menu = !this.display_menu;
     }
